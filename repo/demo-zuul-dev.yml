@@ -1,0 +1,22 @@
+server:
+  port: 8080
+zuul:
+  routes:
+    #路由名称
+    service-a:
+      #uri路径
+      path: /service-a/**
+      #转发的服务编号，实例名称
+      serviceId: service-a
+    service-b:
+      path: /service-b/**
+      serviceId: service-b
+    demo-ribbon:
+      path: /demo-ribbon/**
+      serviceId: demo-ribbon
+    demo-feign:
+      path: /demo-feign/**
+      serviceId: demo-feign
+    demo-hystrix:
+      path: /demo-hystrix/**
+      serviceId: demo-hystrix
